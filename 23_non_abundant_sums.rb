@@ -19,7 +19,7 @@ def non_abundant_sums
         numbers_made_from_abundants << sum 
       end 
     end 
-      (xs.to_a - numbers_made_from_abundants).reduce(:+)
+      (range.to_a - numbers_made_from_abundants).reduce(:+)
 end 
 
 def abundant?(n)
