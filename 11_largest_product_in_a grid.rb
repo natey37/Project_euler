@@ -1,4 +1,7 @@
-#n is the number of numbers in the the product
+#In the 20×20 grid below, four numbers along a diagonal line have been marked in red.
+#The product of these numbers is 26 × 63 × 78 × 14 = 1788696.
+#What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20×20 grid?
+
 
 ARRAY = [
   
@@ -21,8 +24,9 @@ ARRAY = [
 %w[04 42 16 73 38 25 39 11 24 94 72 18 08 46 29 32 40 62 76 36],
 %w[20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16],
 %w[20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54],
-%w[01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48]
-        ]
+%w[01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48] ]
+
+#n is the number of numbers in the the product
 def largest_product_in_a_grid(array, n)
   
   products_from_left_to_right = array.map{|arr| arr.map{|x| x.to_i }}.map{|arr| arr.each_cons(n).to_a }.flatten(1).max_by{|arr| arr.reduce(:*) }
@@ -52,4 +56,4 @@ end
 
 
  
-largest_product_in_a_grid(ARRAY, 4)
+largest_product_in_a_grid(ARRAY, 4) => 70600674
