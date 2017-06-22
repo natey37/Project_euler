@@ -8,7 +8,7 @@
 
 def digit_fifth_powers
   fifth_power_nums = []
-# largest num is 6 digits long, max = 9**5 * 6 = 354294
+#the highest we need to search, 9**5 * 6 = 354294
   (1..354294).each do |x|
   sum = 0
     x.to_s.split("").each do |x|
