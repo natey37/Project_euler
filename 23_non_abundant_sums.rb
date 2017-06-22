@@ -28,7 +28,6 @@ def abundant?(n)
   else 
     return false 
   end 
-  
 end 
 
 def factors(num)
